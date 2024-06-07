@@ -24,8 +24,10 @@ def generate_launch_description() -> LaunchDescription:
                 plugin='camera::CameraNode',
                 parameters=[{
                     "camera": 0,
-                    "width": 640,
-                    "height": 480,
+                    "role": "video",
+                    "format": "YUYV",
+                    "width": 1640,
+                    "height": 1232,
                 }],
                 extra_arguments=[{'use_intra_process_comms': True}],
             ),
