@@ -5,7 +5,7 @@
         <ros2_control name="RealRobot" type="system">
             <hardware>
                 <plugin>dynamixel_hardware/DynamixelHardware</plugin>
-                <param name="usb_port">/dev/ttyUSB0</param>
+                <param name="usb_port">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT94ER1W-if00-port0</param>
                 <param name="baud_rate">1000000</param>
                 <!-- <param name="use_dummy">true</param> -->
             </hardware>
