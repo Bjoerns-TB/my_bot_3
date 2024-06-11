@@ -13,7 +13,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'topic': '/battery_status',
-                'voltage': 11
+                'voltage': 11.0
                 }]
     )
     ])
