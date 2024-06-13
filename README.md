@@ -1,6 +1,6 @@
 ## WIP
 
-A turtlebot burger like robot, heavily based on the tutorials by [Josh Newans](https://articulatedrobotics.xyz/tutorials/)
+A turtlebot burger like ROS2 robot, heavily based on the tutorials by [Josh Newans](https://articulatedrobotics.xyz/tutorials/)
 
 ## Bill of materials
 - Raspberry Pi 4
