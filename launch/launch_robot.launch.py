@@ -103,6 +103,15 @@ def generate_launch_description():
                     get_package_share_directory(package_name),'launch','ina219.launch.py'
                 )])
     )
+
+    robot_localization_config = os.path.join(get_package_share_directory(package_name),'config','ekf.yaml')
+    robot_localization_node = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[robot_localization_config, {'use_sim_time': False}],
+    )  
  
     # Launch them all!
     return LaunchDescription([
@@ -115,5 +124,6 @@ def generate_launch_description():
         lidar,
         bno055,
         camera,
-        ina219
+        ina219,
+        robot_localization_node
     ])
