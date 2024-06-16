@@ -3,11 +3,11 @@
 
 <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="imu_frame"/>
+    <child link="imu_link"/>
     <origin xyz="-0.001 0 0.098"/>
 </joint>
 
-<link name="imu_frame">
+<link name="imu_link">
     <visual>
         <geometry>
         <box size="0.03 0.02 0.005"/>
@@ -23,7 +23,7 @@
 </link>
 
 
-<gazebo reference="imu_frame">
+<gazebo reference="imu_link">
 <sensor name="imu_sensor" type="imu">
 <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
     <ros>
