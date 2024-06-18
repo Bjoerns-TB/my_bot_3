@@ -111,6 +111,12 @@ def generate_launch_description():
         output='screen',
         parameters=[robot_localization_config, {'use_sim_time': False}],
     )  
+
+    voltage = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','voltage.launch.py'
+                )])
+    )
  
     # Launch them all!
     return LaunchDescription([
@@ -124,5 +130,6 @@ def generate_launch_description():
         bno055,
         camera,
         ina219,
-        robot_localization_node
+        robot_localization_node,
+        voltage
     ])
